@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mi Portafolio</title>
+    <meta name="description"
+        content="Portafolio de Melina Quiñajo, estudiante de la carrera de informatica en la mencion de desarrollador de software." />
+    <meta name="keywords"
+        content="Melina Quiñajo, en la mencion de desarrollo de software, conociendo web,dispositivos móviles, Nodejs, Php, Python, Java, Base de datos." />
+    <meta name="author" content="Quiñajo Berrios Melina Viana" />
+    <meta property="og:title" content="Portafolio de Melina Quiñajo" />
+    <meta property="og:description" content="Descubre los proyectos y habilidades de Melina Quiñajo, un estudiante entusiasta en el area de desarrollo de software con experiencia en diversas tecnologías." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://MelinaQB/" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">Melina Viana Quiñajo Berrios</div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#acercade">Acerca de</a></li>
+                        <li><a href="#servicios">Materias Aprobadas</a></li>
+                        <li><a href="#apis">Apis</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="inicio" aria-label="Presentación">
+    <div class="container person">
+        
+        <div class="person-content">
+            <span class="person-badge">Disponible para proyectos</span>
+            
+            <h1>Hola, soy <br> <strong>Melina Quiñajo</strong> </h1>
+            
+            <p> 
+                Desarrolladora de Software y Estudiante de Ingeniería.<br>
+                Universitaria especializada en soluciones web modernas.
+            </p>
+            
+            <div class="actions">
+                <a href="#servicios" class="btn btn--primary">Materias Aprobadas</a>
+                <a href="#contacto" class="btn btn--secondary">Contáctame</a>
+            </div>
+
+            <div class="person-stats">
+                <div class="stat-item">
+                    <strong>10+</strong>
+                    <span>proyectos</span>
+                </div>
+                <div class="stat-item">
+                    <strong>6</strong>
+                    <span>tecnologías</span>
+                </div>
+                <div class="stat-item">
+                    <strong>5+</strong>
+                    <span>apis usadas</span>
+                </div>
+            </div>
+        </div>
+
+        <aside class="person-img" aria-hidden="true">
+            <div class="float-card card--a">React</div>
+            <div class="float-card card--b">Node.js</div>
+            <div class="float-card card--c">Python</div>
+            <div class="avatar">
+                <div class="avatar-interior">MQB</div>
+            </div>
+        </aside>
+
+    </div>
+</section>
+        <section id="acercade" aria-label="Acerca de mí">
+            <div class="container about">
+                <h2>Acerca de mi</h2>
+                <p>
+                    Soy una estudiante para desarrollador de software. Entiendo la tecnología no solo como una herramienta, sino como un motor de transformación social. Con una base sólida en matemáticas avanzadas y un interés genuino en el impacto del desarrollo tecnológico en la sociedad, mi objetivo es desarrollar software que sea funcional, escalable y con propósito. Me especializo en analizar problemas desde múltiples dimensiones para proponer soluciones técnicas que realmente aporten valor en el mundo real
+                </p>
+                <div class="skill-grid">
+                    <article class="skill-card skill--backend">
+                        <span class="skill-icon">⚙️</span>
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Nodejs (nestjs, express)</li>
+                            <li>Php (laravel)</li>
+                            <li>Python (django)</li>
+                            <li>Java (spring)</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card skill--frontend">
+                        <span class="skill-icon">🎨</span>
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>JavaScript/typescript</li>
+                            <li>Angular</li>
+                            <li>React</li>
+                            <li>Vue</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card skill--database">
+                        <span class="skill-icon">🗄️</span>
+                        <h3>Base de Datos</h3>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="servicios">
+    <div class="container projects">
+        <h2>Mis materias y proyectos</h2>
+        
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="frontend">Front-End</button>
+            <button class="filter-btn" data-filter="backend">Back-End</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+
+        <p class="projects-meta"><span id="project-count">0 proyectos</span></p>
+
+        <div id="projects-grid" class="projects-grid">
+            </div>
+    </div>
+</section>
+
+<section id="apis" aria-label="Consumo de APIs públicas">
+    <div class="container">
+        <header class="section-header">
+            <h2 class="api-panel">APIs Públicas en Vivo</h2>
+            <p>Ejemplos reales de Fetch API, <code>async/await</code> y <code>Promise.all()</code>.</p>
+        </header>
+        
+        <div class="apis-grid">
+            <div class="api-panel" id="poke-panel">
+                <div class="api-panel__header">
+                    <span class="api-badge">PokeAPI</span>
+                    <h3>Pokémon con <code>Promise.all()</code></h3>
+                    <p>Carga 6 Pokémon <strong>en paralelo</strong>. Cada tarjeta es una promesa independiente.</p>
+                </div>
+                <div id="poke-grid" class="poke-grid"></div>
+                <button id="poke-next" class="btn btn--outline btn--sm">Cargar siguientes →</button>
+            </div>
+            
+            <div class="api-panel">
+                <div class="api-panel__header">
+                    <span class="api-badge">REST Countries</span>
+                    <h3>Buscar país</h3>
+                    <p>Fetch GET con <strong>async/await</strong> y <strong>destructuring</strong> del objeto JSON.</p>
+                </div>
+                <div class="country-search-box">
+                    <input 
+                        type="search" 
+                        id="country-search" 
+                        placeholder="Escribe un país... ej: Bolivia"
+                    >
+                </div>
+                <div id="country-result"></div>
+            </div>
+        </div>
+        <div class="api-summary">
+                <h3>APIs Públicas cubiertas en el curso</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>API</th>
+                                <th>USO EN EL PORTAFOLIO</th>
+                                <th>MÉTODO</th>
+                                <th>FORMATO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="api-name-link">JSONPlaceholder</span></td>
+                                <td>Proyectos dinámicos + envío de formulario (Fetch POST)</td>
+                                <td><span class="badge badge-get">GET</span> <span class="badge badge-post">POST</span></td>
+                                <td>JSON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="api-name-link">PokeAPI</span></td>
+                                <td>Galería con <code>Promise.all()</code> paralelo</td>
+                                <td><span class="badge badge-get">GET</span></td>
+                                <td>JSON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="api-name-link">REST Countries</span></td>
+                                <td>Buscador en tiempo real con <code>async/await</code></td>
+                                <td><span class="badge badge-get">GET</span></td>
+                                <td>JSON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="api-name-link">OpenWeather</span></td>
+                                <td>Clima en tiempo real (requiere API key gratuita)</td>
+                                <td><span class="badge badge-get">GET</span></td>
+                                <td>JSON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="api-name-link">The Movie DB</span></td>
+                                <td>Catálogo de películas (requiere API key gratuita)</td>
+                                <td><span class="badge badge-get">GET</span></td>
+                                <td>JSON</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+        <section id="tecnologias">
+            <div class="container tech">
+                <h2>Tecnologías que uso</h2>
+                <div class="tech-grid">
+                    <span>⚛️ React</span>
+                    <span>🟢 Node.js</span>
+                    <span>🐍 Python</span>
+                    <span>☕ Java</span>
+                    <span>📱 JavaScript</span>
+                    <span>🗄️ MySQL</span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="contacto" aria-label="Contacto">
+            <div class="container contact">
+                <h2 class="section-title">Cantactenos</h2>
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <div class="contacto-item">
+                            <span class="contacto-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>melina.qberrios00@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <span class="contacto-icon">📍</span>
+                            <div>
+                                <strong>Direccion</strong>
+                                <p>Faro Murillo La Paz, Bolivia</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <span class="contacto-icon">📞</span>
+                            <div>
+                                <strong>Respuesta</strong>
+                                <p>Menos de 24 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required placeholder="ejemplo@gmail.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="presupuesto">Presupuestos Estimado:
+                                    <span class="rango-valor" id="rango-valor">$500</span>
+                                </label>
+                                <input type="range" id="presupuesto" name="presupuesto" min="100" max="5000" step="100"
+                                    value="500" />
+                                <div class="range-labels">
+                                    <span>$100</span><span>$5000</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Tipo de servicio</label>
+                                <input type="search" id="servicio" name="servicio" list="servicios-list"
+                                    placeholder="Busca un servicio..." />
+                                <datalist id="servicios-list">
+                                    <option value="Desarrollo Web Full Stack">
+                                    <option value="API REST / Back-End">
+                                    <option value="Diseño UI / Front-End">
+                                    <option value="Base de Datos">
+                                    <option value="Consultoría Técnica">
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required
+                                    placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Enviar mensaje →</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="logo">Melina Quiñajo</span>
+                <p>Desarrollador De Software e Innovacion tecnologica· La Paz, Bolivia</p>
+            </div>
+            <nav class="social-links">
+                <a href="https://github.com/MelinaQB/Portafolio" target="_blank">Github</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            </nav>
+        </div>
+        <p class="footer-copy">&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // Actualizar valor del range en tiempo real
+        const range = document.getElementById('presupuesto');
+        const val = document.getElementById('rango-valor');
+        if (range && val) {
+            range.addEventListener('input', () => {
+                val.textContent = '$' + Number(range.value).toLocaleString();
+            });
+        }
+    </script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
